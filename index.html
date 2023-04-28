@@ -4,97 +4,140 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jack rummler</title>
+    <title>JTR</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <ul id="sidemenu">
-                    <li><a href="#header">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#portfolio">portfolio</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <h1 class="Co"><span class="highlight2">Jack Rummler</span></h1>
-                <h2 class="Co"><span class="highlight">geospatial data scientist <br>public policy analyst <br> urbanist enthusiast</span></h2>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#portfolio">data analytics</a></li>
+                <li><a href="#writing">writing</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1><span>Jack Rummler</span>geospatial data expert<br> & <br>urban policy communicator</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/headshot.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"><span class="highlight">about me</span></h1><br>
+                <p>Hey there! I am Jack Rummler - a Florida born, Philadelphia residing lover of all things urban and spatial. I am a sustainability and resilience planning professional turned geospatial data analyst inspired to work at the intersections of urban planning, public policy, and data science. I aspire to work where I can leverage my skillsets in spatial data analysis to build and shift sustainable community outcomes.</p><br>
+                <p>Whether watching the social and ecological degradation of my home state to my personal experiences navigating poor built environment infrastructure living with spina bifida, my passion for policy and planning work is driven by a myriad of life experiences. With a Bachelor of Sustainability from the University of Florida and Master of Urban Spatial Analytics from the University of Pennsylvania, I have the dual forces of applied social science research and quantitative spatial analysis to approach policy and planning decision-making with a creative, equitable, and data-oriented lens.</p><br>
+                <p>If that piques your interest, my resume, socials, and portfolio are below. Thanks for stopping by!</p><br>
+                <ul class="social-links">
+                    <a href="assets/resume-jtr.pdf" class="resume-button" download="resume-jtr.pdf">resume</a>
+                    <li><a href="https://github.com/jtrummler"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://linkedin.com/in/jackrummler"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="mailto:jtrummler0503@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                  </ul>
             </div>
         </div>
     </div>
-    <!-- -----------about---------- -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/headshot.png">
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">data analytics</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/eurosat1.PNG">
+                <div class="layer">
+                    <h3>CLASSIFYING EUROSAT LAND COVER DATA</h3><br>
+                    <p>Developing several convolutional neural network models to predict 10 different land cover classifications, with an accuracy of nearly 80%. Click <a href="https://nbviewer.org/github/jtrummler/eurosat-hw4/blob/main/MUSA650_HW4_JackRummler.ipynb">here</a> to see the process.</p><br>
+                    <p>Skills used: Keras, Tensorflow, convolutional neural networks</p><br>
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title"><span class="highlight">about me</span></h1>
-                    <p>Hey there! I am Jack Rummler - a Florida born, Philadelphia residing lover of all things urban and spatial! I am a sustainability professional turned geospatial data scientist inspired to work at the intersections of urban planning, public policy, and data science. I aspire to work where I can leverage my skillsets in spatial data analysis to build and shift sustainable community outcomes. I am experienced in a variety of programming languages (R, Python, SQL), machine learning/deep learning algorithms, and qualitative research methods. </p>
-                    <p>If that piques your interest, my resume, socials, and portfolio are below. Thanks for stopping by!</p>
-                    <ul class="social-links">
-                        <a href="assets/resume-jtr.pdf" class="resume-button" download="resume-jtr.pdf">resume</a>
-                        <li><a href="https://github.com/jtrummler"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://linkedin.com/in/jackrummler"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="mailto:jtrummler0503@gmail.com"><i class="fas fa-envelope"></i></a></li>
-                      </ul>
+            </div>
+            <div class="work">
+                <img src="images/nj.png">
+                <div class="layer">
+                    <h3>PREDICTING NEW JERSEY TRANSIT TRAIN DELAYS</h3><br>
+                    <p>Accurately predicted train delays on the Northeast Corridor two hours in advance with an average error of only 26 seconds. Check out our <a href="assets/njtransit-adams-rummler.html">R Markdown</a> and <a href="https://www.youtube.com/watch?v=vrF7Rini-4M">YouTube video.</a></p><br>
+                    <p>Skills used: R, OLS regression, binary logistic regression</p><br>
+                    <p>Project Team: Rebekah Adams and Jack Rummler</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/cluster215.png">
+                <div class="layer">
+                    <h3>CLUSTER 215: PHILADELPHIA NEIGHBORHOODS</h3><br>
+                    <p>Using a k-means cluster analysis on Philadelphia's neighborhoods using demographic and built environment indicators. Check out the <a href="https://jtrummler.github.io/PhillyClusters/">final visualization</a> and <a href="https://github.com/jtrummler/PhillyClusters">GitHub repository.</a></p><br>
+                    <p>Skills used: Python, Sci-kit Learn, API data wrangling</p><br>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/risk.png">
+                <div class="layer">
+                    <h3>GEOSPATIAL RISK PREDICTION OF CANNABIS POSSESSION IN CHICAGO, ILLINOIS</h3>
+                    <p>Building a latent risk prediction model to inform policy conclusions about over-policing. Check out my <a href="assets/musa508-hw3.html">R Markdown.</a></p><br>
+                    <p>Skills used: R, poisson regression, policy analytics</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/nc-house.png">
+                <div class="layer">
+                    <h3>HOME PRICE MODELING IN MECKLENBERG COUNTY, NORTH CAROLINA</h3>
+                    <p>Using OLS regression to understand the spatial characteristics of home price predictions with accuracy of nearly 75%. Check out our <a href="assets/midterm-508.html">final report.</a></p><br>
+                    <p>Skills used: R, OLS regression, spatial analysis</p><br>
+                    <p>Project Team: Rebekah Adams and Jack Rummler</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/flood-inundation.png">
+                <div class="layer">
+                    <h3>FLOOD INUNDATION MODELING IN CALGARY, ALBERTA AND MINNEAPOLIS, MINNESOTA</h3>
+                    <p>Hypothesizing the spatial and built environment indicators of where floods happen. Check out our <a href="assets/midterm675-tanabe-rummler.html">report</a> and <a href="https://www.youtube.com/watch?v=8kkovNI0Wrw">Youtube video.</a></p><br>
+                    <p>Skills used: R, binomial logistic regression, hydrological science</p><br>
+                    <p>Project Team: Kate Tanabe and Jack Rummler</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ----------portfolio------------ -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title"><span class="highlight">portfolio</span></h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/nj2.png" height="800" width="650">
-                    <div class="layer">
-                        <h3><span class="highlight">Predicting New Jersey Transit train delays</span></h3>
-                        <a href="assets/njtransit-adams-rummler.html"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/cluster215.png">
-                    <div class="layer">
-                        <h3><span class="highlight">Cluster215: A k-means cluster analysis of Philadelphia neighborhoods</h3>
-                        <a href="https://jtrummler.github.io/PhillyClusters/"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/risk.png">
-                    <div class="layer">
-                        <h3><span class="highlight">Latent Risk Prediction of Cannabis Possession Charges in Chicago, IL</span></h3>
-                        <a href="assets/musa508-hw3.html"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/nc-house.png">
-                    <div class="layer">
-                        <h3><span class="highlight">Home price modeling in Mecklenberg County, North Carolina</span></h3>
-                        <a href="assets/midterm-508.html"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/floods.jpg">
-                    <div class="layer">
-                        <h3><span class="highlight">Forecasting floods in Calgary, Alberta and Minneapolis, Minnesota</span></h3>
-                        <a href="assets/midterm675-tanabe-rummler.html"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/crash-map.png">
-                    <div class="layer">
-                        <h3><span class="highlight">Urban Street Networks and Interactive Web Maps: Philadelphia car crashes and fatal shootings</span></h3>
-                        <a href="https://nbviewer.org/github/jtrummler/philly-crash-map/blob/main/assignment-6-jtrummler.ipynb"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
+</div>
+<!-- ----------writing------------ -->
+<div id="writing">
+    <div class="container">
+        <h1 class="sub-title">writing</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/gnv.png">
+                <div class="layer">
+                    <h3>EVALUATION OF EAST GAINESVILLE'S MICROTRANSIT</h3><br>
+                    <p>A <a href="https://fdotwww.blob.core.windows.net/sitefinity/docs/default-source/transit/documents/evaluation-of-east-gainesville-mico-mobility.pdf?sfvrsn=37915487_2">study</a> of Gainesville, Florida's microtransit pilot and a recommendation guideline for the effectiveness and stability of micromobility services.</p><br>
+                    <p>Skills used: Literature and practice review, technical memorandums, transit planning</p><br>
+                    <p>Project Team: Dr. Ruth Steiner, Dr. Siva Srinivasan, Dr. Mehri Mohebbi, Dr. Xiang Yan, Sagar Patni, Larissa Krinos, Juan Suarez, Jack Rummler</p><br>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="work">
+                <img src="images/duval.png">
+                <div class="layer">
+                    <h3>RESILIENCY FOR A BETTER DUVAL</h3><br>
+                    <p>A scoping literature review and case study analysis of best practices in urban resilience planning to inform recommendations for Jacksonville, Florida. Mentored by Dr. Azza Kamal. Click <a href="https://ufdc.ufl.edu/AA00088536/00001">here</a> to see the final report.</p><br>
+                    <p>Skills used: Social sciences and qualitative research, social-ecological resilience practice</p><br>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/gwr.png">
+                <div class="layer">
+                    <h3>REGRESSION METHODS TO ASSESS PHILADELPHIA'S BLOCK GROUP INCOME</h3><br>
+                    <p>Using spatial statistics and different regression methods to investigate relationship between census block level median household income and neighborhood characteristics. Click <a href="assets/hw2-liu-rummler-tanabe.pdf">here</a> to read the final report.</p><br>
+                    <p>Skills used: R, ArcGIS Pro, GeoDa, spatial lag, spatial error, geographic weighted regression</p><br>
+                    <p>Project Team: Haobing Liu, Jack Rummler, and Kate Tanabe</p>
+                </div>
+            </div>
 
 
 
@@ -148,6 +191,4 @@
     })
   </script>
 </body>
-</html>
-  
 </html>

@@ -1,10 +1,12 @@
 @font-face {
-    font-family: 'Ce';
-    src: url('assets/century.ttf') format('truetype');
+    font-family: 'F';
+    src: url('assets/Gravity-Bold.otf') format('opentype');
 }
-@font-face {
-    font-family: 'Co';
-    src: url('assets/couture.otf') format('opentype');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'F';
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
@@ -13,100 +15,77 @@ body{
     background: #080808;
     color: #fff;
 }
-h1{
-    font-family: 'Co';
-}
-h3{
-    font-family: 'Co';
-    font-size: 22px
-}
-p{
-    font-family: 'Ce';
-    font-size: 20px;
-    line-height: 1.5;
-    margin: 20px 0;
-}
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/bg4.png);
+    background-image: url(images/background-header.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    text-align: center
 }
 .container{
     padding: 10px 10%;
 }
+
 nav{
-    font-family: 'Co';
-    font-size: 30px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 0px 20px;
+    margin: 10px 20px;
     align-items: center;
+    position: relative;
 }
+
 nav ul li a{
-    color: white;
-    background-color: #69B366;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
+    position: center;
     align-items: center;
-    margin: 0px
+    background-color: #8BC566;
 }
 nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #69B366;
+    background-color: #8BC566;
     position: absolute;
     left: 0;
-    bottom: -20px;
+    bottom: -6px;
     transition: 0.5s;
+    align-items: center;
 }
 nav ul li a:hover::after{
     width: 100%;
-    align-items: center;
 }
 .header-text{
-    font-family: 'Co';
-    margin-top: 15%;
-    font-size: 50px;
-    text-align: center;
-    align-content: center;
+    margin-top: 20%;
+    font-size: 30px;
 }
 .header-text h1{
-    font-size: 110px;
+    font-size: 60px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .header-text h1 span{
-    color: black;
-    align-items: center;
-}
-.header-text h2{
-    font-family: 'Co';
-    font-size: 40px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    align-items: center;
-}
-.highlight{
-    background-color: #69B366;
-    margin: 2px;
+    background-color: #8BC566;
     opacity: 80%;
 }
-.highlight2{
-    background-color: #CBE466;
-    align-items: center;
-    opacity: 80%
+h2{
+    text-decoration: underline;
+    text-align: center;
 }
+
 /* -----------about--------------- */
 #about{
     padding: 80px 0;
@@ -135,6 +114,9 @@ nav ul li a:hover::after{
     font-size: 60px;
     font-weight: 600;
     color: #fff;
+}
+p{
+    text-align: justify;
 }
 .resume-button {
   background-color: #69B366;
@@ -174,16 +156,14 @@ nav ul li a:hover::after{
 .h1 i{
     color: #69B366;
 }
-p{
-    font-size:17px
-}
-/* -----------portfolio--------------- */
+
+/* -------portfolio----------- */
 #portfolio{
     padding: 50px 0;
 }
 .work-list{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -191,22 +171,16 @@ p{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    height: 300px;
 }
-.work img {
+.work img{
     width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
 }
 .layer{
-    width: (100% - 80px);
-    height: 0px;
+    width: 100%;
+    height: 0;
     background: linear-gradient(black, black);
     border-radius: 10px;
     position: absolute;
@@ -218,31 +192,98 @@ p{
     justify-content: center;
     flex-direction: column;
     padding: 0 40px;
-    text-align: center;
+    text-align: left;
     font-size: 14px;
    transition: height 0.5s;
 }
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
+    background-color: #69B366;
 }
 .layer a{
-    margin-top: 0px;
-    color: #69B366;
+    background-color: #69B366;
     text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
+    color: #fff;
+}
+.layer p{
+    text-align: justify;
 }
 .work:hover img{
     transform: scale(1.1);
 }
 .work:hover .layer{
     height: 100%;
+}
+
+/* ---------contact-------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #69B366;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #69B366;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #69B366;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #69B366;
+}
+.copyright a{
+    color: #69B366;
+    text-decoration: none;
 }
 /* -----------------css for small screens--------- */
 nav .fas{
@@ -251,7 +292,7 @@ nav .fas{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-color:#69B366;  
+        background-color:#080808
     }
     .header-text{
         margin-top: 100%;
@@ -265,7 +306,7 @@ nav .fas{
         font-size: 25px;
     }
     nav ul{
-        background: #69B366;
+        background: black;
         position: fixed;
         top: 0;
         right: -200px;
@@ -309,7 +350,7 @@ nav .fas{
     }
 }
 #msg{
-    color: #69B366;
+    color: #61b752;
     margin-top: -40px;
     display: block;
 }
