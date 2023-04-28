@@ -79,7 +79,7 @@ nav ul li a:hover::after{
 }
 .header-text h1 span{
     background-color: #8BC566;
-    opacity: 80%;
+    opacity: 100%;
 }
 h2{
     text-decoration: underline;
